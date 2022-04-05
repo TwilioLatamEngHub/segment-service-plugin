@@ -5,6 +5,7 @@ const allowedIdTypes = ['email', 'phone', 'user_id']
 // example full url:
 // https://profiles.segment.com/v1/spaces/123spaceId/collections/users/profiles/email:team@owldemo.com/events?limit=25
 
+
 module.exports.fetchPersona = async (context, event, helpers) => {
   try {
     let { identifier, idType, limit = 25 } = event
@@ -30,7 +31,9 @@ module.exports.fetchPersona = async (context, event, helpers) => {
       encodeURIComponent(identifier)
     const fullEventUrl = `${startUrl}/events?limit=${limit}`
     const fullTraitUrl = `${startUrl}/traits?limit=${limit}`
-    const fullIdUrl = `${startUrl}/external_ids?limit=${limit}`
+    const fullIdUrl = `${startUrl}/external_ids?limit=25`
+
+
 
     helpers.logger.debug(
       `searching for user ${helpers.stringify(fullTraitUrl)}`

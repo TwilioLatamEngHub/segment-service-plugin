@@ -1,6 +1,14 @@
-# Your custom Twilio Flex Plugin
+# Customer Context Plugin
 
-Twilio Flex Plugins allow you to customize the appearance and behavior of [Twilio Flex](https://www.twilio.com/flex). If you want to learn more about the capabilities and how to use the API, check out our [Flex documentation](https://www.twilio.com/docs/flex).
+This Flex plugin renders context coming from a chatbot (using Twilio Studio or otherwise) onto the agent's screen. It also enables fetching customer traits and events from Twilio Segment
+
+## Using Custom Attributes
+
+This plugin will read everything on the **context** object within the Task Attributes and renders them in the screen (key and value). This approach was taken to render only relevant information to the agent.
+
+When handing off a conversation to an agent on Flex, pass the **context** object like the example below:
+
+![setup](screenshots/setup.png)
 
 ## Setup
 

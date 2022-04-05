@@ -1,4 +1,4 @@
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 
 export const CustomerTimelineComponentStyles = styled('div')`
   padding: 10px;
@@ -34,4 +34,4 @@ export const AttributeLabel = styled('div')`
   font-weight: bold;
   text-transform: uppercase;
   
-`;
+`; 
