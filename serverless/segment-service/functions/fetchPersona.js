@@ -2,7 +2,10 @@ const Helpers = require(Runtime.getFunctions()['helpers/index'].path)
 const fetchPersonaModule = require(Runtime.getFunctions()['shared/fetchPersona']
   .path)
 
-exports.handler = async (context, event, callback) => {
+const TokenValidator = require('twilio-flex-token-validator').functionValidator;
+
+
+exports.handler = TokenValidator(async (context, event, callback) => {
   const helpers = new Helpers(context, event)
   try {
     const user = await helpers.auth.validate(context, event)
@@ -31,4 +34,4 @@ exports.handler = async (context, event, callback) => {
     response.setBody(err)
     callback(response)
   }
-}
+});
