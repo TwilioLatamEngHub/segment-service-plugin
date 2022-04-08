@@ -1,11 +1,12 @@
 {
   "name": "plugin-customer-context",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "postinstall": "flex-plugin pre-script-check"
   },
   "dependencies": {
+    "@twilio-paste/theme": "^6.0.4",
     "@twilio/flex-plugin-scripts": "5.0.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -16,7 +17,7 @@
   },
   "devDependencies": {
     "@twilio-paste/core": "^11.3.0",
-    "@twilio/flex-ui": "^2.0.0-alpha.15",
+    "@twilio/flex-ui": "^1.28.2",
     "react-test-renderer": "^17.0.2"
   }
 }

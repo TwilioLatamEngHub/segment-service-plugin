@@ -73,7 +73,7 @@ const CustomTaskList = (props) => {
             </VerticalTimelineElement>
             });  
 
-  if(segmentData) console.log(segmentData.events);
+  if(segmentData) console.log(segmentData);
     
   const selectedId = useUID();
 

@@ -2,8 +2,8 @@ import React from 'react';
 import { VERSION } from '@twilio/flex-ui';
 import { FlexPlugin } from '@twilio/flex-plugin';
 
-import CustomTaskListContainer from './components/CustomerContext/CustomerContext.Container';
 import reducers, { namespace } from './states';
+import CustomerContextContainer from './components/CustomerContext/CustomerContext.Container';
 
 const PLUGIN_NAME = 'CustomerContextPlugin';
 
@@ -23,7 +23,7 @@ export default class CustomerContextPlugin extends FlexPlugin {
     this.registerReducers(manager);
 
     const options = { sortOrder: 1, if : props => props.selectedTaskSid != undefined };
-    flex.AgentDesktopView.Panel2.Content.add(<CustomTaskListContainer key="CustomerTimelinePlugin-component" />, options);
+    flex.AgentDesktopView.Panel2.Content.add(<CustomerContextContainer key="CustomerTimelinePlugin-component" />, options);
 
     flex.AgentDesktopView.Panel2.Content.remove('container'); // 'container' key is the CRMContainer
   }
